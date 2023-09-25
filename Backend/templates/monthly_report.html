@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Entertainment Report</title>
+</head>
+<body>
+    <h1>Monthly Entertainment Report</h1>
+    <p>Report period: {{ start_date }} - {{ end_date }}</p>
+    <p>Total Amount: ₹{{ total_revenue }}</p>
+
+    <h2>Shows Booked</h2>
+    <table>
+        <tr>
+            <th>Show Name</th>
+            <th>Show Timing</th>
+
+        </tr>
+        {% for show in shows_seen %}
+        <tr>
+            <td>{{ show.name }}</td>
+            <td>{{ show.show_date.strftime('%B %d, %Y %H:%M:%S') }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Tickets</h2>
+    <table>
+        <tr>
+            <th>Show Name</th>
+            <th>Show Timing</th>
+            <th>Number of Tickets</th>
+            <th>Amount</th>
+
+        </tr>
+        {% for book in shows_booked %}
+        <tr>
+            <td>{{ book.movie_name }}</td>
+            <td>{{ book.booking_date.strftime('%B %d, %Y %H:%M:%S') }}</td>
+            <td>{{ book.quantity }}</td>
+            <td>₹{{ book.amount }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p>Thank you for using Ticket Show!</p>
+</body>
+</html>

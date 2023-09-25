@@ -1,0 +1,526 @@
+_type: export
+__export_format: 4
+__export_date: 2023-08-13T15:04:40.985Z
+__export_source: insomnia.desktop.app:v2023.4.0
+resources:
+  - _id: req_e4d947ec263440a5bf65ab060c4584c2
+    parentId: fld_4201b5bd7cd142409735789628c5cd75
+    modified: 1691485159175
+    created: 1691483327870
+    url: "{{host}}/signup"
+    name: POST /signup
+    description: User registration
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "sachin",
+        	"email": "sachin@gmail.com",
+        	"password": "Sachin@123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1691483327870
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4201b5bd7cd142409735789628c5cd75
+    parentId: wrk_5abc7480140c4039a50c80c1d6ad5281
+    modified: 1691938966351
+    created: 1691483243203
+    name: UserAuth
+    description: Singing up and Loging in for users
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1691483272960.5
+    _type: request_group
+  - _id: wrk_5abc7480140c4039a50c80c1d6ad5281
+    parentId: null
+    modified: 1691938708442
+    created: 1691481728265
+    name: TicketShow
+    description: APIs for the TicketSHow web app
+    scope: collection
+    _type: workspace
+  - _id: req_bdb3aa845f5d4be4adb033f5c14923c6
+    parentId: fld_4201b5bd7cd142409735789628c5cd75
+    modified: 1691485168500
+    created: 1691484600822
+    url: "{{host}}/login"
+    name: POST /login
+    description: User Login
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "sachin",
+        	"password": "Sachin@123"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1691376344331
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_76352cde814a46e9b20f462fc076020d
+    parentId: fld_97a38b51ddd44711b06de94eb824a33f
+    modified: 1691493285464
+    created: 1691484746050
+    url: "{{host}}/theater"
+    name: GET /theater
+    description: Get all theaters
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1691493000261
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_97a38b51ddd44711b06de94eb824a33f
+    parentId: wrk_5abc7480140c4039a50c80c1d6ad5281
+    modified: 1691938971726
+    created: 1691483256527
+    name: Theater
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1691483271610.375
+    _type: request_group
+  - _id: req_26d8e361dd1047b49543828c607f352b
+    parentId: fld_97a38b51ddd44711b06de94eb824a33f
+    modified: 1691493290711
+    created: 1691484927231
+    url: "{{host}}/theater/1"
+    name: GET /theater/{id}
+    description: Get a particular theater by its id
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1691492964641.5
+    isPrivate: false
+    settingStoreCookies: false
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3629fd35992f4c268783db7610d4b3a5
+    parentId: fld_97a38b51ddd44711b06de94eb824a33f
+    modified: 1691493294425
+    created: 1691485295525
+    url: "{{host}}/theater"
+    name: POST /theater
+    description: Add a new thaeter
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Cinepolis",
+        	"place": "delhi",
+        	"capacity": 50
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691492946831.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5afe19aa460d414a8ec7efe46e46b5ec
+    parentId: fld_97a38b51ddd44711b06de94eb824a33f
+    modified: 1691493279485
+    created: 1691492929022
+    url: "{{host}}/theater/1"
+    name: PUT /theater/{id}
+    description: Update a theater
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"place":"mumbai",
+        	"capacity":35
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691492929022
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_075a5c3ac864433aa92b363401ea0536
+    parentId: fld_97a38b51ddd44711b06de94eb824a33f
+    modified: 1691493296618
+    created: 1691493071500
+    url: "{{host}}/theater/2"
+    name: DEL /theater/{id}
+    description: Delete a theater
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691492928972
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_209023397fb542008b1b3118591ceee3
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938315202
+    created: 1691484711226
+    url: "{{host}}/show"
+    name: GET /show
+    description: Get all shows
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1691496414483.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    parentId: wrk_5abc7480140c4039a50c80c1d6ad5281
+    modified: 1691938974098
+    created: 1691483267560
+    name: Show
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1691483270935.3125
+    _type: request_group
+  - _id: req_9a89aa3ec4944905b036a4e79fc46322
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938320753
+    created: 1691493328166
+    url: "{{host}}/show/1"
+    name: GET /show/{id}
+    description: Get a particular show by its id
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1691496280989.9375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ad2b5d90e2642d9bb6150fabd45fe5f
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938350383
+    created: 1691493412777
+    url: "{{host}}/show"
+    name: POST /show
+    description: Create a new show
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Iron Man",
+        	"tags": "action",
+        	"language": "English",
+        	"ticket_price": 20,
+        	"theatre_id": 1,
+        	"date": "2023-07-29T20:18",
+        	"youtube_url": "https://youtu.be/8ugaeA-nMTc"	
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691496214243.2188
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a511dae81ac04e19863883173c20895e
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938365590
+    created: 1691495791514
+    url: "{{host}}/show/1"
+    name: PUT /show/{id}
+    description: Update a particular show
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"tags": "drama",
+        	"ticket_price": 45,
+        	"show_date": "2023-08-29T20:18"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691496180869.8594
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c8b1af63fc084a4481f344ef95d2946b
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938411507
+    created: 1691496663524
+    url: "{{host}}/show/1/vote"
+    name: POST /show/{id}/vote
+    description: Vote a show
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"rating": 3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691496147496.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_307d5c00e1a047a7b1bda7737e5f997d
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938639475
+    created: 1691938437082
+    url: "{{host}}/show/1/comment"
+    name: POST /show/{id}/comment
+    description: Comment on a show
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"comment": "Awesome movie!!"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691494573878.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4c5dbd249a6c45cb9e90cee704c06dde
+    parentId: fld_f8c7ac89c7e44858a306f6df9bcb5050
+    modified: 1691938317154
+    created: 1691496503479
+    url: "{{host}}/show/3"
+    name: DEL /show/{id}
+    description: Delete a show
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691484019498
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_82ef4d0645eb415a9c5d10fe42392e74
+    parentId: fld_17dec5e913404f7e82dd3e7eb7f1aaa5
+    modified: 1691938607655
+    created: 1691496833780
+    url: "{{host}}/booking"
+    name: GET /booking
+    description: Get all bookings of a user
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691496846023.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_17dec5e913404f7e82dd3e7eb7f1aaa5
+    parentId: wrk_5abc7480140c4039a50c80c1d6ad5281
+    modified: 1691938968470
+    created: 1691483278361
+    name: Booking
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1691483270260.25
+    _type: request_group
+  - _id: req_f1ced6e0b5f140f381d7c975937edf61
+    parentId: fld_17dec5e913404f7e82dd3e7eb7f1aaa5
+    modified: 1691938592731
+    created: 1691496858267
+    url: "{{host}}/booking"
+    name: POST /booking
+    description: Book a show
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"show_id": 4,
+        	"quantity": 3
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication:
+      type: bearer
+      token: "{{token}}"
+    metaSortKey: -1691496845973.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_25bc257ce41005fa3311c7387134b2b7cb050dd8
+    parentId: wrk_5abc7480140c4039a50c80c1d6ad5281
+    modified: 1691492812550
+    created: 1691481728272
+    name: Base Environment
+    data:
+      host: http://127.0.0.1:8000
+      token: "{% response 'body', 'req_bdb3aa845f5d4be4adb033f5c14923c6',
+        'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+    dataPropertyOrder:
+      "&":
+        - host
+        - token
+    color: null
+    isPrivate: false
+    metaSortKey: 1691481728272
+    _type: environment
+  - _id: jar_25bc257ce41005fa3311c7387134b2b7cb050dd8
+    parentId: wrk_5abc7480140c4039a50c80c1d6ad5281
+    modified: 1691481728277
+    created: 1691481728277
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: env_974a839291c24a42bb458227f9e78f39
+    parentId: env_25bc257ce41005fa3311c7387134b2b7cb050dd8
+    modified: 1691492809156
+    created: 1691484180919
+    name: LocalEnv
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1691484180919
+    _type: environment
