@@ -1,6 +1,15 @@
 
 # TicketShow
-The Ticket Show web app is a platform designed for movie enthusiasts to easily book show tickets. The app provides a seamless user experience, allowing users to explore theaters, discover shows, and make bookings effortlessly. Admin users have the added capability to manage theaters, shows, and user roles. The app also includes scheduled reminders, and monthly entertainment reports to enhance user engagement.
+The Ticket Show web app is a platform designed for movie enthusiasts to easily book show tickets. The app provides a seamless user experience, allowing users to explore theaters, discover shows, and make bookings effortlessly. Admin users have the added capability to manage theaters, shows, and user roles. The app also includes scheduled reminders and monthly entertainment reports to enhance user engagement.
+
+# Screenshots
+![page1](https://github.com/sandeep-khr/TicketShow/assets/70543525/b0ff3233-ec17-4744-a976-bff20e9de49a)
+
+![page2](https://github.com/sandeep-khr/TicketShow/assets/70543525/0afb794e-9b16-43bc-abe6-f1a14d654016)
+
+![page3](https://github.com/sandeep-khr/TicketShow/assets/70543525/4023a1ef-49d8-413a-8f44-6567fa293b45)
+
+![page4](https://github.com/sandeep-khr/TicketShow/assets/70543525/ff9d3d87-7788-469c-8037-6e7602a64988)
 
 # Getting Started
 ### Prerequisites
@@ -52,7 +61,6 @@ start the app
 
 ```
 pyhton app.py
-
 ```
 ## Usage
 ### User Registration and Login
