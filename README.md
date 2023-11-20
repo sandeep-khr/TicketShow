@@ -5,6 +5,10 @@ The Ticket Show web app is a platform designed for movie enthusiasts to easily b
 # Screenshots
 ![page1](https://github.com/sandeep-khr/TicketShow/assets/70543525/b0ff3233-ec17-4744-a976-bff20e9de49a)
 
+
+https://github.com/sandeep-khr/TicketShow/assets/70543525/9df51b81-d18b-44df-9150-f8855edd4bf5
+
+
 ![page2](https://github.com/sandeep-khr/TicketShow/assets/70543525/0afb794e-9b16-43bc-abe6-f1a14d654016)
 
 ![page3](https://github.com/sandeep-khr/TicketShow/assets/70543525/4023a1ef-49d8-413a-8f44-6567fa293b45)
